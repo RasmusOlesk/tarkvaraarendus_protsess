@@ -1,0 +1,204 @@
+﻿1. Mis on protsessori valmistamisel enim kasutatud materjal  - Kõige enim kasutatud materjal on räni
+
+
+2. Mille poolest erinevad protsessorid tavalistest integraallülititest? - integraallülitid töötavad spetsiaalsete ülesannetega, mis nõuavad tõhusust, täpsust või analoogsignaali käsitsemist
+
+
+3. Mida tähendab CMOS? - Täispikk nimetus (Complementary metal–oxide–semiconductor). CMOS on akutoitel töötav pooljuhtkiip arvutites, mis salvestab teavet.
+
+
+4. Miks on protsessori kiibi suurus oluline? - väiksem suurus võimaldab kiiremat töötlemiskiirust, väiksemat energiatarbimist ja paremat energiatõhusust.
+
+
+5. Milline on passiivse soojusneelu töö põhimõte? - See viib seadme poolt tekitatud soojuse eemale tavaliselt õhku või vedelikku
+
+
+6. Mis on FSB? - arvuti sideliides, mis toimis kui andmerada, mis ühendas protsessorit, RAM-i ja muid komponente
+
+
+7. Mida tähendab CISC? - Täispikk nimetus (Complex Instruction Set Computer). Arvutiarhitektuur, milles üksikud juhised võivad teha mitmeid madala taseme operatsioone
+
+
+8. Mida tähendab RISC? - Täispikk nimetus( Reduced Instruction Set Computer). Vähendatud käsukomplektiga arvuti arvutiarhitektuur, mille eesmärk on lihtsustada arvutile antud individuaalseid juhiseid ülesannete täitmiseks.
+
+
+9. Loetle protsessori režiimid. - kernel mode, Hypervisor mode, User mode, IRQ, FIQ
+
+
+10. Mis on registrid? - andmebaasid kus on saadavl koheselt töödelda andmeid
+
+
+11. Mis on vahemälu? - Ajutine salvestuskoht andmete jaoks, see muutab tulevased päringud kiiremaks.
+
+
+12. Mis on ujuvkomaüksus? - Lühend (FPU). Arvutisüsteem, mis on spetsiaalselt ette nähtud ujuvpunktide arvuga toimingute tegemiseks
+
+
+13. Mis on transistor? - Pooljuhtseade, mida kasutatakse elektrisignaalide ja toite võimendamiseks või vahetamiseks.
+
+
+14. ROM-i eelised RAM-i ees? - ROM säilitab andmeid, isegi kui seade on välja lülitatud
+
+
+15. Mis on ja kus kasutatakse EEPROM-i? - Kasutatakse väikeste andmehulkade salvestamiseks, mida tuleb säilitada isegi siis, kui toide on välja lülitatud. Seda kasutatakse  mikrokontrollerid, arvutid, tarbeelektroonika nagu telerid ja nutitelefonid,
+
+
+16. SRAM-i ja DRAM-i erinevused? - SRAM on kiirem, kallim ja seda kasutatakse protsessori vahemälude jaoks, samas kui DRAM on aeglasem, odavam ja seda kasutatakse põhisüsteemi mälu jaoks.
+
+
+17. Milline DRAM on kiirem EDO, BEDO, FPM? - BEDO on kõige kiirem
+
+
+18. SDRAM-i ja DDR SDRAM-i erinevused? - 
+SDRAM - Edastab andmeid üks kord kellatsükli jooksul, 100–133 MHz taktsagedus, pinge on 3,3 V
+DDR SDRAM - Edastab andmeid kaks korda tsükli jooksul, 200–400 MHz taktsagedus, pinge on 2.5V kuni 1.8V
+
+
+19. Milline DRAM mälu on kiireim ja kui kiire ta on? - DDR5, standardkiirusega alates umbes 4800 MT/s
+
+
+20. Millest sõltub maksimaalne mälukogus? - emaplaat (pesade arv, pesa maht), protsessor
+
+
+21. Kui palju mälu suudab teoreetiliselt 64-bitine protsessor kasutada? - 16 exabaiti
+
+
+22. Mälu rollid? - kodeerida, salvestada ja hankida andmeid
+
+
+23. Mälu tüübid? - sensoorne, lühiajaline (nimetatakse ka tööks) ja pikaajaline
+
+
+24. Mida mõjutab kõvaketas? - füüsilised kahjustused , elektriprobleemid, mehaaniline kulumine ja tarkvara-/loogikaprobleemid
+
+
+25. Palju maksis 1 GB 1980? (lisada viide) - 34384.80 eurot https://dnacyber.com.au/the-first-1gb-hard-drive-a-1980s-technological-marvel/
+
+
+26. Palju maksab 1 GB tänapäeval? ( lisada viide) - 2.23 eurot https://www.visualcapitalist.com/the-cost-of-1-gb-of-mobile-data-worldwide/
+
+
+27. Palju on kõvaketta optimaalne kasutusaeg? 3-5 aastat
+
+
+28. Kui suur on kõvaketta sektor? - 512 baiti või 4096 baiti
+
+
+29. Millele sarnanevad rajad? - auditilogid või interaktiivsed kaardid
+
+
+30. Mis on MTBF? - seadme keskmine tööaeg ootamatute rikete vahel
+
+
+31. Kus paikneb kõvaketta kontroller? - kõvaketta all
+
+
+32. Enim kasutatud taldriku materjal. - alumeenium
+
+
+33. Mis on RAID? - andmesalvestustehnoloogia, mis ühendab mitu füüsilist draivi (kõvakettaid või SSD-sid) üheks või mitmeks loogiliseks üksuseks jõudluse parandamiseks
+
+
+34. Mida näitab päringukiirus? - kui kiiresti ja tõhusalt suudab andmebaasisüsteem töödelda andmete saamise või töötlemise päringuid
+
+
+35. Mida kardab magnetketas? - magnetid ja füüsiline kahju
+
+
+36. Mis on SCSI maksimaalne andmeedastuskiirus? - 640 MB/s
+
+
+37. Mitu juhet on UDMA 66 kaablil? - 80 kaablit
+
+
+38. Mida mõjutab kõvaketta pöörlemiskiirus? - spindlimootor
+
+
+39. Kuidas töötab RAID0? - andmete jagamine plokkideks ja nende kirjutamine kahele või enamale draivile
+
+
+40. Mis on RAID 5 eelis RAID3 ja RAID4 ees? distributed parity
+
+
+41. Kui palju saab kahest 1TB kettast 
+koosneva RAID1 massiivi kasutaja andmeid salvestada? - 1 TB
+
+
+42. Emaplaadi tüübid? -ATX, Micro-ATX, Minj-ITX
+
+
+43. AT ja ATX erinevused? AT on vanem on ainult 12-pin connectorit
+
+
+44. LPX ja NLX erinevused? - NLX on täiustatud standardiseerimine
+
+
+45. Emaplaadi osad? - Protsessori pesa, RAM-i pesad, chipset, BIOS, PCIe/SATA
+
+
+46. ISA, PCI, AGP ja PCI-e ribalaius (MB/s)? -
+ISA - 8-16 MB/s
+PCI - 133 MB/s
+AGB - 266 MB/s
+
+
+47. Mis on BIOS? - emaplaadil olev püsivara, mis käivitab arvuti, testib riistvara ja laadib operatsioonisüsteemi
+
+
+48. Süsteemi ressursid? - arvutisüsteemi mis tahes komponent või element, mida kasutatakse süsteemi eesmärkide saavutamiseks ja mida hallatakse vastavalt süsteemipoliitikale.
+
+
+49. Mis on IRQ? - IRQ on signaal, mis saadetakse arvuti protsessorile, et selle töö hetkeks katkestada.
+
+
+50. Mis on DMA? - arvutisüsteemide omadus, mis võimaldab teatud riistvara alamsüsteemidel pääseda ligi põhisüsteemi mälule keskseadmest sõltumatult
+
+
+51. Mis on I/O aadress? - numbriline identifikaator, mida arvuti protsessor kasutab välisseadmega suhtlemiseks.
+
+
+52. Mis on Loogiline seade? - sisendseadme tüüp, mis suudab toota erinevat tüüpi andmeid, näiteks teksti, arvväärtusi või valikuid eelnevalt määratletud komplektidest, ning võib hõlmata mitut füüsilist seadet.
+
+
+53. Mitu IRQ kanalit arvutil on? - 16 liini
+
+
+54. Seleta katkestusnõude põhimõte? - See võimaldab protsessoril reageerida sündmustele või tingimustele, mis vajavad kohest tähelepanu, näiteks sisend-/väljundtoimingud või riistvara talitlushäired.
+
+
+55. Mis aastal asutati IBM? - 16. Juuni 1911
+
+
+56. Millal loodi esimene PC? - 1974
+
+
+57. Millal väljastati Windows95? - 24. august 1995
+
+
+58. Mis projektis osalesid Paul Allen ja Bill Gates 1974. aastal? Kõige esimene mikroarvuti
+
+
+59. Levinumad toiteploki võimsused? - 
+400 - 500 W
+550 - 650 W
+700 - 850 W
+1000 - 1200 W
+
+
+60. Nimeta toiteploki juhtmed, nende värvused ja pinged. 
+Kõikide pingete ühine maandus:
+must, 0V
+CPU, GPU, ventilaatorid, kettad:
+kollane, 12 V
+Vanemad HDD/SSD, USB, loogika:
+Punane, 5V
+RAM, PCIe, loogika:
+Oranž, 3.3 V
+
+
+
+61. Korpuse tüübid? - Full Tower, Mid Tower, Mini Tower, ja SFF
+
+
+62. Nimeta kolm sisend- ja kolm väljundseadet.   - sisend: klaviatuur, hiir, pult
+Väljund: monitor, kõlar, printer
