@@ -1,0 +1,85 @@
+/* MATRIX BACKGROUND + VERTICAL CODE RAIN */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #00ff7f;
+    font-family: "Consolas", monospace;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- Koodivihma taust --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    /* Taustapilt, mis näeb välja nagu Matrixi kood */
+    background-image: url("https://i.imgur.com/8K3J7QF.png");
+
+    background-size: cover;
+    opacity: 0.35;
+
+    animation: rain 12s linear infinite;
+    z-index: 1;
+}
+
+/* --- Teine kiht, et vihm oleks sügavam ja realistlikum --- */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    background-image: url("https://i.imgur.com/8K3J7QF.png");
+    background-size: cover;
+    opacity: 0.15;
+
+    animation: rain 20s linear infinite;
+    z-index: 1;
+}
+
+/* --- Sisu peab olema vihma peal --- */
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Animatsioon --- */
+@keyframes rain {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* --- Pealkirjad --- */
+h1, h2 {
+    color: #00ff7f;
+    text-shadow: 0 0 10px #00ff7f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Lingid --- */
+a {
+    color: #00ff7f;
+    text-decoration: none;
+    border-bottom: 1px dashed #00ff7f;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 0 0 10px #00ff7f;
+}

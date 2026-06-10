@@ -1,0 +1,73 @@
+/* --- ÜLDINE MATRIX TAUST --- */
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #00ff7f;
+    font-family: "Consolas", monospace;
+    overflow: hidden;
+    position: relative;
+}
+
+/* --- Koodivihma konteiner --- */
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+}
+
+/* --- Üksik koodijuga --- */
+.stream {
+    flex: 1;
+    color: #00ff7f;
+    font-size: 20px;
+    line-height: 22px;
+    white-space: nowrap;
+    text-shadow: 0 0 8px #00ff7f;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+/* --- Animatsioon: kukub ülevalt alla --- */
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* --- Sisu peab olema vihma peal --- */
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Pealkirjad --- */
+h1, h2, h3 {
+    color: #00ff7f;
+    text-shadow: 0 0 10px #00ff7f;
+}
+
+/* --- Nupp --- */
+.button a {
+    padding: 10px 20px;
+    background: #003300;
+    border: 1px solid #00ff7f;
+    color: #00ff7f;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.button a:hover {
+    background: #00ff7f;
+    color: #000;
+}

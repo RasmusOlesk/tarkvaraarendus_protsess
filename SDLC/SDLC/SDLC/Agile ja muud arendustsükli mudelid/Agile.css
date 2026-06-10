@@ -1,0 +1,193 @@
+/* matrix-agile.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  min-height: 100vh;
+  font-family: "Courier New", monospace;
+  background: radial-gradient(circle at top, #0f0 0, #000 55%);
+  color: #00ff41;
+  padding: 32px 12px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 0 0 4px #00ff41, 0 0 10px #00ff41;
+  position: relative;
+  overflow-x: hidden;
+  opacity: 0;
+  animation: boot-in 1.2s ease-out forwards;
+}
+
+/* Matrix grid “rain” */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+      rgba(0, 255, 65, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 255, 65, 0.12) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px, 40px 40px;
+  mix-blend-mode: screen;
+  opacity: 0.4;
+  animation: matrix-glitch 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes matrix-glitch {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes boot-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings */
+h1,
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.4);
+  padding-bottom: 6px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-top: 18px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 26px;
+}
+
+/* Text blocks */
+p {
+  max-width: 960px;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  margin: 10px auto;
+}
+
+/* Lists */
+ul {
+  max-width: 960px;
+  margin: 10px auto 0;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+ul li::before {
+  content: "> ";
+  color: #00ff41;
+}
+
+/* Links */
+a {
+  color: #00ff41;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0, 255, 65, 0.6);
+  transition: color 0.2s ease, text-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: #b3ffce;
+  text-shadow: 0 0 6px #00ff41, 0 0 14px #00ff41;
+  border-color: #b3ffce;
+}
+
+/* Images as “monitorid” */
+img,
+image {
+  display: block;
+  margin: 16px auto;
+  max-width: 100%;
+  border: 1px solid rgba(0, 255, 65, 0.5);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.35);
+  filter: grayscale(0.4) contrast(1.1) brightness(0.9);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+img:hover,
+image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 18px rgba(0, 255, 65, 0.7);
+  filter: grayscale(0.1) contrast(1.2) brightness(1);
+}
+
+/* Tabelid – neon terminal style */
+table {
+  width: 100%;
+  max-width: 960px;
+  border-collapse: collapse;
+  margin: 12px auto;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 14px rgba(0, 255, 65, 0.25);
+}
+
+th,
+td {
+  border: 1px solid rgba(0, 255, 65, 0.4);
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+th {
+  background: rgba(0, 255, 65, 0.08);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Väike hover-efekt ridadele */
+tr:hover {
+  background: rgba(0, 255, 65, 0.08);
+}
+
+/* Väiksemad ekraanid */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+}

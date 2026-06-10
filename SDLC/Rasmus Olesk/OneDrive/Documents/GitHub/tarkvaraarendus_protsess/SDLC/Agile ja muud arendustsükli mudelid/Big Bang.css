@@ -1,0 +1,193 @@
+/* matrix-bigbang.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #00ff41;
+  font-family: "Courier New", Courier, monospace;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Õrn "koodivihma" muster taustal */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(#00ff41 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* Vertikaalne "koodijuga" servas */
+body::after {
+  content: "01 10 11 00 10 01 11 00 10 01 01 11 00 10 01";
+  position: fixed;
+  right: 10px;
+  top: -100%;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: rgba(0, 255, 65, 0.6);
+  animation: rain 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(220%);
+    opacity: 0.1;
+  }
+}
+
+/* Sisu laius */
+h1,
+h2,
+p,
+ul {
+  max-width: 900px;
+}
+
+/* Pealkiri */
+h1 {
+  font-size: 2.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #00ff41, 0 0 25px #00ff41;
+}
+
+/* Vilkuv kursori efekt pealkirja järel */
+h1::after {
+  content: "_";
+  margin-left: 10px;
+  animation: cursorBlink 0.9s steps(2, start) infinite;
+}
+
+@keyframes cursorBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Alampealkiri */
+h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px #00ff41;
+}
+
+/* Tekstiplokk */
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 255, 65, 0.7);
+  padding: 22px;
+  border-radius: 6px;
+  box-shadow: 0 0 14px rgba(0, 255, 65, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Väike "glitch" äär p-l */
+p::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* Pilt */
+image,
+img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  margin: 25px auto 5px auto;
+  border-radius: 6px;
+  border: 1px solid #00ff41;
+  box-shadow: 0 0 18px rgba(0, 255, 65, 0.55);
+}
+
+/* List ja lingid */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #00ff41;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  text-shadow: 0 0 4px rgba(0, 255, 65, 0.7);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: #00ff41;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+a:hover {
+  text-shadow: 0 0 10px #00ff41;
+}
+
+/* Väike responsiivsus */
+@media (max-width: 600px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}

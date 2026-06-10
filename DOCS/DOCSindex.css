@@ -1,0 +1,151 @@
+/* matrix-docs.css */
+
+/* Üldine reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Keha – Matrix vibe */
+body {
+  background: #000;
+  color: #00ff41;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.6;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Õrn taustamuster */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(#00ff41 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* Koodivihma efekt paremal servas */
+body::after {
+  content: "01 10 11 00 10 01 11 00 10 01 01 11 00 10 01";
+  position: fixed;
+  right: 10px;
+  top: -100%;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: rgba(0, 255, 65, 0.5);
+  animation: rain 9s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rain {
+  0% { transform: translateY(0); opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(220%); opacity: 0.1; }
+}
+
+/* Pealkirjad */
+h1, h2, h3 {
+  text-shadow: 0 0 10px #00ff41;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h1::after {
+  content: "_";
+  margin-left: 8px;
+  animation: cursorBlink 0.9s steps(2, start) infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 25px;
+}
+
+/* Tekstiplokid */
+p {
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 2px solid #00ff41;
+  padding: 12px 18px;
+  border-radius: 4px;
+}
+
+/* Listid */
+ul {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+/* Tabelid */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+td, th {
+  border: 1px solid #00ff41;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background: rgba(0, 255, 65, 0.05);
+}
+
+/* Lingid */
+a {
+  color: #00ff41;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.25s;
+}
+
+a:hover {
+  border-bottom: 1px solid #00ff41;
+  text-shadow: 0 0 8px #00ff41;
+}
+
+/* Väike responsiivsus */
+@media (max-width: 700px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

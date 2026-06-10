@@ -1,0 +1,187 @@
+/* matrix.css */
+
+/* Üldine taust – must + roheline “koodi vihm” */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Consolas", "Courier New", monospace;
+  background: #000;
+  color: #00ff7f;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Matrix koodi vihma kiht */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      rgba(0, 255, 127, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 255, 127, 0.1) 1px,
+      transparent 1px
+    );
+  background-size: 100% 20px, 20px 100%;
+  mix-blend-mode: screen;
+  opacity: 0.4;
+  animation: matrix-glow 4s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+/* Langevad koodi joad */
+body::after {
+  content: "01 10 11 00 10 01 11 00 01 10 11 00 10 01 11 00";
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  pointer-events: none;
+  color: #00ff7f;
+  opacity: 0.25;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: pre;
+  text-shadow: 0 0 8px #00ff7f;
+  animation: code-rain 12s linear infinite;
+  z-index: 1;
+}
+
+/* Põhisisu konteiner */
+body > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Pealkirjad */
+h1, h2 {
+  color: #00ff7f;
+  text-shadow: 0 0 8px #00ff7f;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  border-bottom: 1px solid rgba(0, 255, 127, 0.4);
+  padding-bottom: 0.3em;
+  margin: 1.5em 0 0.8em;
+}
+
+h2 {
+  margin-top: 1.2em;
+}
+
+/* Lõigud ja tekst */
+p, li, td, th {
+  color: #b8ffda;
+}
+
+/* Lingid – Matrix roheline hoveriga */
+a {
+  color: #00ff7f;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0, 255, 127, 0.4);
+  transition: color 0.2s ease, text-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #00ff7f;
+  border-color: #00ff7f;
+}
+
+/* Loendid */
+ul {
+  list-style: none;
+  padding-left: 1.2em;
+}
+
+ul li::before {
+  content: ">";
+  color: #00ff7f;
+  margin-right: 0.5em;
+}
+
+/* Tabel – neon raam ja ridade highlight */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  border: 1px solid rgba(0, 255, 127, 0.4);
+  box-shadow: 0 0 15px rgba(0, 255, 127, 0.25);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+th, td {
+  border: 1px solid rgba(0, 255, 127, 0.25);
+  padding: 0.6em 0.8em;
+  vertical-align: top;
+}
+
+th {
+  background: rgba(0, 255, 127, 0.08);
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+tr:nth-child(even) {
+  background: rgba(0, 255, 127, 0.03);
+}
+
+tr:hover {
+  background: rgba(0, 255, 127, 0.12);
+}
+
+/* Pildid tabelis */
+td img {
+  max-width: 120px;
+  display: block;
+  margin: 0.4em 0;
+  filter: grayscale(1) brightness(1.2) hue-rotate(90deg);
+}
+
+/* Väike “terminali” tunne kogu sisule */
+body {
+  padding: 1.5em 8vw;
+  box-sizing: border-box;
+}
+
+/* Animatsioonid */
+@keyframes matrix-glow {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes code-rain {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(33.33%);
+  }
+}
+
+/* Väiksemad ekraanid */
+@media (max-width: 768px) {
+  body {
+    padding: 1em 4vw;
+  }
+
+  table {
+    font-size: 0.85em;
+  }
+
+  td img {
+    max-width: 80px;
+  }
+}
