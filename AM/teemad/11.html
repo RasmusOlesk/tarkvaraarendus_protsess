@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./AM.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../pildid/logo1-removebg-preview (1).png" alt="Minu logo">
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Tarkvara Arendusprotsess</a>
+                <a href="../proge.html">Programmeerimise alused</a>
+                <a href="../multim.html">Multimeedia</a>
+                <a href="../Networking.html">Networking</a>
+                <a href="../../IT/index.html">IT juhtimine</a>
+            </nav>
+        </div>
+    </header>
+    <section class="content-left">
+        <div class="about">
+            <h1>While-tsükkel Pythonis</h1>
+
+            <p>
+                <strong>While-tsükkel</strong> erineb for-tsüklist selle poolest, et selle käivitamise arv ei ole rangelt määratud. Tsüklile antakse boolean-väide, mida kontrollitakse iga iteratsiooni alguses. While-tsükkel kestab, kuni väide on <strong>tõene</strong>.
+            </p>
+
+            <h2>While-tsükli süntaks</h2><br>
+            <pre><code>while boolean_statement:
+                # kood, mis täidetakse, kuni väide on True
+            </code></pre>
+
+            <h2>Näide: järjendi väärtuste läbikäik</h2><br>
+            <pre><code>i = 0
+            list = [3, 2, 10]
+            while i != len(list):
+                print(list[i])
+                i += 1
+            </code></pre>
+
+            <p>Konsooli väljund:</p>
+            <pre><code>3
+            2
+            10
+            </code></pre>
+
+            <h2>Lõpmatu tsükkel</h2>
+            <pre><code>while True:
+                # kood, mis käib lõpmatuseni
+                pass  # pass on tühikohatäitja
+            </code></pre>
+
+            <h2>While-tsükkel juhuslike väärtuste töötlemisel</h2><br>
+            <p>
+                While on eriti kasulik, kui vajame tsüklit määramatu arv kordi, näiteks juhuslike väärtuste või kasutaja sisendiga töötamisel.
+            </p>
+
+            <pre><code>import random as r
+
+            check = 10            # number, mida soovime saada
+            random_choose = 0
+
+            while random_choose != check:  # seni, kuni ei saa õiget numbrit
+                random_choose = r.choice(range(11))  # juhuslik number 0-10
+                print(random_choose)
+            </code></pre>
+
+            <p>
+                Sel juhul on tsüklite arv ennustamatu ja erineb iga programmi käivitamisel.
+            </p>
+            <div class="button-group">
+                <a href="12.html" class="btn-gradient">Järgmine teema</a>
+            </div>
+        </div>
+    </section>

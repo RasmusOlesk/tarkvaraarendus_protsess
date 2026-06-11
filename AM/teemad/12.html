@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./AM.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../pildid/logo1-removebg-preview (1).png" alt="Minu logo">
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Tarkvara Arendusprotsess</a>
+                <a href="../proge.html">Programmeerimise alused</a>
+                <a href="../multim.html">Multimeedia</a>
+                <a href="../Networking.html">Networking</a>
+                <a href="../../IT/index.html">IT juhtimine</a>
+            </nav>
+        </div>
+    </header>
+    <section class="content-left">
+        <div class="about">
+            <h1>Sõne (string) Pythonis</h1>
+
+            <p>
+                <strong>Sõne</strong> ehk <em>string</em> on andmetüüp Pythonis, mida kasutatakse teksti esitamiseks. Sõne kirja panemiseks kasutatakse 
+                ülakomasid (" ") või jutumärke (' '). Mitmerealine sõne tuleb piiritleda <strong>kolmekordsete jutumärkidega</strong> (""" """).
+            </p>
+
+            <p>Pythonis on sõne tüübi tähistuseks <strong>str</strong>.</p>
+
+            <h2>Sõne loomine</h2><br>
+
+            <pre><code># Ülakomade kasutamine
+            str_quotes = "hello"
+
+            # Jutumärkide kasutamine
+            str_commas = 'ABC'
+
+            # Kolmekordsed jutumärgid mitmerealise teksti jaoks
+            str_triple = """
+            _____         _    _
+            |  __ \       | |  | |
+            | |__) |_   _ | |_ | |__    ___   _ ___
+            |  ___/| | | || __|| '_ \  / _ \ | '_' |
+            | |    | |_| || |_ | | | || (_) || | | |
+            |_|     \__, | \__||_| |_| \___/ |_| |_|
+                    __/ |
+                    |___/
+            """
+            </code></pre>
+
+            <h2>Kombinatsioonid ja erimärgid</h2><br>
+
+            <p>
+                Kui tekstis on ülakomasid, tasub sõne piiritleda jutumärkidega ja vastupidi. 
+                Langkriips (\) on <strong>spetsiaalne sümbol</strong>, mille kasutamine ülakoma või jutumärgi ees annab Pythonile teada, 
+                et tegemist pole sõne lõpuga.
+            </p>
+
+            <pre><code># Näide erilise sümboli kasutamisest
+            quote_in_string = "See on ülakoma: \" "
+            apostrophe_in_string = 'See on apostroof: \' '
+            </code></pre>
+            <div class="button-group">
+                <a href="13.html" class="btn-gradient">Järgmine teema</a>
+            </div>
+        </div>
+    </section>

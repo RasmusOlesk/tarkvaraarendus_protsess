@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./AM.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../pildid/logo1-removebg-preview (1).png" alt="Minu logo">
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Tarkvara Arendusprotsess</a>
+                <a href="../proge.html">Programmeerimise alused</a>
+                <a href="../multim.html">Multimeedia</a>
+                <a href="../Networking.html">Networking</a>
+                <a href="../../IT/index.html">IT juhtimine</a>
+            </nav>
+        </div>
+    </header>
+    <section class="content-left">
+        <div class="about">
+            <h1>Andmetüübid (liht- ja liittüübid)</h1>
+
+            <p>
+                Programmeerimisel jaotatakse andmetüübid laias laastus <strong>lihttüüpideks</strong> ja <strong>liittüüpideks</strong>. 
+                Lihtüübid tähistavad nö “atomaarseid” või “jagamatuid” väärtusi - näiteks <strong>arvutüübid</strong> ja <strong>tõeväärtustüüp</strong>. 
+                Liittüübid (näiteks <strong>list</strong> ja <strong>ennik</strong>) aga tähistavad väärtusi, mida saab veel mingiteks 
+                <strong>alamkomponentideks</strong> jagada.
+            </p>
+        
+            <p>
+                Nagu öeldud, liittüüpi väärtused on kombineeritud kokku mingitest teistest väärtustest. Oluline on see, et need komponendid 
+                moodustavad mingi kindla <strong>struktuuri</strong>. Näiteks järjendite puhul moodustub struktuur sellest, et iga komponent 
+                (element) on teiste komponentidega võrreldes kas eespool või tagapool - teisisõnu, <strong>järjendi struktuur määrab elementide järjestuse</strong>.
+            </p>
+        
+            <p>
+                Teistel Pythoni liitüüpidel on teistsugune struktuur - näiteks <strong>hulgatüübi struktuur</strong> määrab ära, 
+                millised elemendid hulka kuuluvad, elementide järjestus pole selles struktuuris oluline. Kuna struktuur on liittüüpide 
+                puhul väga tähtis, nimetatakse neid vahel ka <strong>struktuurseteks tüüpideks</strong> või <strong>andmestruktuurideks</strong>.
+            </p>
+        
+            <p>
+                Antud õpiku käsitluses on erinevatel andmestruktuuridel erinevad kasutusviisid, mida nad toetavad:
+            </p>
+        
+            <ul>
+                <li>Listi puhul saab elementi <strong>append-ida</strong></li>
+                <li>Sõnastikus saab küsida elementi tema (suvalist tüüpi) <strong>võtme järgi</strong></li>
+                <li>Reaalsetes programmides on sageli vaja teada ka <strong>kuidas</strong seda tehakse, mitte ainult <strong>mida</strong nad teevad</li>
+            </ul>
+        
+            <p>
+                Erinevat andmetüüpi väärtusi on vaja erinevates olukordades, sest nendega saab sooritada erinevaid tegevusi. 
+                Ka sama tegevus võib anda erinevaid tulemusi sõltuvalt kasutatud andmetüübist. Samuti võetakse erinevat tüüpi väärtused 
+                arvuti mälus eri viisidel - <strong>ruumi võtmine mälus sõltub andmetüübist</strong>.
+            </p>
+        
+            <h2>Olulisemad andmestruktuurid Pythonis</h2><br>
+        
+            <p>
+                Pythonis on kõige olulisemad järgmised andmestruktuurid:
+            </p>
+        
+            <ul>
+                <li><strong>Täisarvud</strong> - näiteks 3, 0, -1</li>
+                <li><strong>Ujukomaarvud</strong> - näiteks 3.3, -7.0</li>
+                <li><strong>Sõne / tekst</strong> - näiteks "koer" või 'tipp ja täpp'</li>
+                <li><strong>Tõeväärtused</strong> - True või False</li>
+            </ul>
+        
+            <p>
+                Lisaks nendele on Pythonis veel keerukamaid andmestruktuure (näiteks <strong>järjend</strong> või <strong>sõnastik</strong>), 
+                millega tutvume hiljem.
+            </p>
+        
+            <h2>Arvud</h2><br>
+        
+            <p>
+                Pythonis on eraldi kaks andmetüüpi täis- ja reaalarvude esitamiseks:
+            </p>
+        
+            <ul>
+                <li><strong>Täisarvud (int)</strong> - lühend sõnast <em>integer</em>, näiteks 7, -8, 20</li>
+                <li><strong>Reaalarvud (float)</strong> - lühend sõnast <em>floating point number</em>, näiteks 4.5, 5.0, -11.09</li>
+            </ul>
+        
+            <p>
+                Reaalarvude esituses kasutatakse koma asemel punkti.
+            </p>
+        
+            <h2>Tekst ja sõnad</h2><br>
+        
+            <p>
+                Teksti ja sõnade jaoks on Pythonis olemas andmetüüp <strong>sõne (str)</strong>. 
+                Sõnu ja teksti piiritletakse nii ühe- kui ka kahekordsete jutumärkidega, näiteks "koer" või 'minu pere ja muud loomad'.
+            </p>
+        
+            <h2>Tõeväärtused</h2><br>
+        
+            <p>
+                Tõeväärtuste andmetüüp Pythonis on <strong>bool</strong> (lühend sõnast <em>boolean</em>) ja sellel on ainult kaks võimalikku väärtust: <strong>True</strong> ja <strong>False</strong>.
+            </p>
+            <div class="button-group">
+                <a href="05.html" class="btn-gradient">Järgmine teema</a>
+            </div>
+        </div>
+    </section>

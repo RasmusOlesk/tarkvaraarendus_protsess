@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./AM.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../pildid/logo1-removebg-preview (1).png" alt="Minu logo">
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Tarkvara Arendusprotsess</a>
+                <a href="../proge.html">Programmeerimise alused</a>
+                <a href="../multim.html">Multimeedia</a>
+                <a href="../Networking.html">Networking</a>
+                <a href="../../IT/index.html">IT juhtimine</a>
+            </nav>
+        </div>
+    </header>
+    <section class="content-left">
+        <div class="about">
+            <h1>For-tsükkel Pythonis</h1>
+
+            <p>
+                <strong>For-tsüklit</strong> kasutatakse siis, kui on vaja <strong>jada</strong> (Pythonis näiteks sõne, järjend või ennik) kõik elemendid läbi käia ning iga elemendiga midagi teha.
+            </p>
+
+            <h2>Lihtne näide sõne puhul</h2><br>
+            <pre><code>nums = "12345"  # sõne, mida tsükliga käiakse läbi
+            for i in nums:       # for-tsükli definitsioon
+                print(i)         # kood, mis täidetakse iga elemendi kohta
+            </code></pre>
+
+            <p>Konsooli väljund:</p>
+            <pre><code>1
+            2
+            3
+            4
+            5
+            </code></pre>
+
+            <h2>Tsüklimuutuja nimetus</h2><br>
+            <p>
+                Tsüklimuutuja (<strong>control variable</strong>) võib olla mis tahes nimi, mis kirjeldab elemente, mida tsükliga käiakse läbi. Näiteks sõne puhul võiks nimeks olla <strong>letter</strong>:
+            </p>
+
+            <pre><code>alphabet = "abcdefghijklmnopqrstuvwxyz"
+            for letter in alphabet:
+                print(letter)
+            </code></pre>
+
+            <p>Järjendi elementide läbikäik:</p>
+
+            <pre><code>cats = ["Whiskers", "Mittens", "Luna", "Oliver"]
+            for cat in cats:
+                print(cat)
+            </code></pre>
+
+            <p>Väljund:</p>
+            <pre><code>Whiskers
+            Mittens
+            Luna
+            Oliver
+            </code></pre>
+
+            <h2>For-tsükli sees return kasutamine</h2><br>
+            <p>
+                Kui soovime tsükli varem lõpetada ja tagastada väärtuse, kasutatakse <strong>return</strong>. Näide sõne numbrite eemaldamiseks:
+            </p>
+
+            <pre><code>def remove_numbers(string_with_numbers: str):
+                numbers_removed = ""  # uus sõne ainult tähtedega
+                for character in string_with_numbers:
+                    if character.isalpha():   # kui täht
+                        numbers_removed += character
+                return numbers_removed       # tagastatakse alles pärast tsükli lõppu
+
+            print(remove_numbers("sl42dap1"))  # tulemuseks "sldap"
+            </code></pre>
+
+            <p>
+                Funktsiooni valideerimise näide: tagastame False kohe, kui sõne sisaldab numbreid:
+            </p>
+
+            <pre><code>def validate_string(string_to_validate: str):
+                for character in string_to_validate:
+                    if not character.isalpha():  # kui ei ole täht
+                        return False             # kohe katkestame tsükli
+                return True                      # kui kõik tähed, tagastame True
+
+            print(validate_string("sl42dap1"))  # tulemuseks False
+            </code></pre>
+            <div class="button-group">
+                <a href="11.html" class="btn-gradient">Järgmine teema</a>
+            </div>
+        </div>
+    </section>
