@@ -1,163 +1,154 @@
-/* matrix-style.css */
-
+/* ================================
+   GLOBAL MATRIX THEME
+================================ */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  font-family: "Courier New", monospace;
-  background: radial-gradient(circle at top, #022, #000 60%);
-  color: #00ff7f;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-  text-shadow: 0 0 4px #00ff7f;
+    background: black;
+    color: #00ff99;
+    font-family: "Courier New", monospace;
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* Matrix “vihm” taust */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: linear-gradient(
-      rgba(0, 255, 127, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(0, 255, 127, 0.08) 1px,
-      transparent 1px
-    );
-  background-size: 40px 18px, 18px 40px;
-  mix-blend-mode: screen;
-  opacity: 0.4;
-  animation: matrix-shift 12s linear infinite;
-  z-index: -1;
-}
-
-@keyframes matrix-shift {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(40px);
-  }
-}
-
-h1 {
-  font-size: 2.4rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #00ff7f;
-  padding-bottom: 10px;
-}
-
-h2,
-h3 {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #7cffc4;
-}
-
-p {
-  max-width: 800px;
-  line-height: 1.6;
-  margin: 15px 0 25px;
-}
-
-/* Lingid – nagu terminali käsud */
+/* LINKS — darker text + bright neon underline */
 a {
-  display: inline-block;
-  margin: 6px 10px 6px 0;
-  padding: 6px 10px;
-  color: #b8ffda;
-  text-decoration: none;
-  border: 1px solid #00ff7f;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 6px rgba(0, 255, 127, 0.4);
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s, color 0.2s;
+    color: #00cc66; /* darker green text */
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #00ff99; /* bright neon green underline */
+    padding-bottom: 2px;
+    transition: 0.3s;
 }
 
 a:hover {
-  background: #00ff7f;
-  color: #001b0f;
-  transform: translateY(-1px);
-  box-shadow: 0 0 12px rgba(0, 255, 127, 0.9);
+    color: #00ff99; /* bright green on hover */
+    border-bottom-color: #00ff99; /* underline glows brighter */
+    text-shadow: 0 0 10px #00ff99;
 }
 
-/* “Joone” asemel stiilne eraldaja */
-br + br,
-body > br {
-  display: none;
+
+a:hover {
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99;
 }
 
-body > h2:first-of-type::before {
-  content: ">";
-  margin-right: 8px;
-  color: #00ff7f;
+/* HEADERS */
+h1, h2, h3 {
+    text-shadow: 0 0 10px #00ff99;
+    margin: 20px 0;
 }
 
-/* Tabel – neon raamiga kaart */
+/* ================================
+   MOVING GREEN SQUARE BACKGROUND
+================================ */
+.background-squares {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.square {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 255, 0, 0.25);
+    animation: moveSquares 12s linear infinite;
+}
+
+@keyframes moveSquares {
+    0% { transform: translateX(-200px); }
+    100% { transform: translateX(200vw); }
+}
+
+/* ================================
+   MATRIX CODE RAIN
+================================ */
+.code-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.rain-stream {
+    position: absolute;
+    top: -100%;
+    color: #00ff99;
+    font-size: 18px;
+    white-space: nowrap;
+    animation: rainFall linear infinite;
+    text-shadow: 0 0 8px #00ff99;
+}
+
+@keyframes rainFall {
+    0% { transform: translateY(-100%); opacity: 1; }
+    100% { transform: translateY(120vh); opacity: 0; }
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.nav-links a {
+    font-size: 18px;
+}
+
+/* TABLE */
 table {
-  margin-top: 15px;
-  border-collapse: collapse;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid #00ff7f;
-  box-shadow: 0 0 15px rgba(0, 255, 127, 0.5);
-  overflow: hidden;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 td {
-  border: 1px solid rgba(0, 255, 127, 0.4);
-  padding: 10px 14px;
-  min-width: 120px;
+    border: 1px solid #00ff99;
+    padding: 10px;
 }
 
-tr:first-child td {
-  background: rgba(0, 255, 127, 0.08);
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-tr:nth-child(2) td {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-/* Pilt – rohekas filter */
+/* IMAGE */
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  border: 1px solid #00ff7f;
-  box-shadow: 0 0 12px rgba(0, 255, 127, 0.7);
-  filter: grayscale(0.2) contrast(1.1) hue-rotate(90deg);
+    border: 2px solid #00ff99;
+    box-shadow: 0 0 15px #00ff99;
 }
 
-/* Väike “terminali” efekt kogu lehele */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  mix-blend-mode: multiply;
-  opacity: 0.4;
-  z-index: -1;
+/* CENTER ALL TEXT ELEMENTS */
+body, h1, h2, h3, p, a, table {
+    text-align: center;
 }
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* centers all links horizontally */
+    gap: 20px;               /* spacing between links */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+

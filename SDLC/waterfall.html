@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./waterfall.css">
+    <link rel="stylesheet" href="../MainIndex.css">
     <title>Kosemudel</title>
 </head>
 <body>
+    <div class="background-squares"></div>
+    <div class="code-rain"></div>'
     <header class="top-nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-logo">
@@ -114,4 +116,48 @@
 
 
 </body>
+<script>
+/* ================================
+   MOVING GREEN SQUARES
+================================ */
+const squareContainer = document.querySelector('.background-squares');
+
+for (let i = 0; i < 40; i++) {
+    const sq = document.createElement('div');
+    sq.classList.add('square');
+    sq.style.top = Math.random() * 100 + "%";
+    sq.style.left = Math.random() * 100 + "%";
+    sq.style.animationDuration = 10 + Math.random() * 20 + "s";
+    sq.style.opacity = 0.2 + Math.random() * 0.5;
+    squareContainer.appendChild(sq);
+}
+
+/* ================================
+   MATRIX CODE RAIN
+================================ */
+const rainContainer = document.querySelector('.code-rain');
+const chars = "01アイウエオカキクケコｱｲｳｴｵ";
+
+function createRainStream() {
+    const stream = document.createElement('div');
+    stream.classList.add('rain-stream');
+
+    let text = "";
+    const length = 10 + Math.random() * 30;
+
+    for (let i = 0; i < length; i++) {
+        text += chars[Math.floor(Math.random() * chars.length)] + "<br>";
+    }
+
+    stream.innerHTML = text;
+    stream.style.left = Math.random() * 100 + "vw";
+    stream.style.animationDuration = 3 + Math.random() * 5 + "s";
+
+    rainContainer.appendChild(stream);
+
+    setTimeout(() => stream.remove(), 8000);
+}
+
+setInterval(createRainStream, 200);
+</script>
 </html>
