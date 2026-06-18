@@ -9,8 +9,7 @@
 </head>
 <body>
     <div class="background-squares"></div>
-    <div class="code-rain"></div>'
-
+    <div class="code-rain"></div>
 
 
     <nav class="nav-links">
@@ -65,6 +64,8 @@
         </re>
     </table>
 </body>
+
+
 <script>
 /* ================================
    MOVING GREEN SQUARES
@@ -91,14 +92,15 @@ function createRainStream() {
     const stream = document.createElement('div');
     stream.classList.add('rain-stream');
 
-    let text = "";
     const length = 10 + Math.random() * 30;
 
     for (let i = 0; i < length; i++) {
-        text += chars[Math.floor(Math.random() * chars.length)] + "<br>";
+        const char = document.createElement('span');
+        char.textContent = chars[Math.floor(Math.random() * chars.length)];
+        stream.appendChild(char);
+        stream.appendChild(document.createElement('br'));
     }
 
-    stream.innerHTML = text;
     stream.style.left = Math.random() * 100 + "vw";
     stream.style.animationDuration = 3 + Math.random() * 5 + "s";
 
